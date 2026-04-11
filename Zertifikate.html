@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zertifikate</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="font-['Poppins',sans-serif] p-0 m-0 border-[30px] border-slate-700 bg-[url(./image/bg_color.jpg)] bg-cover bg-top"
+  >
+    <header class="flex flex-col gap-5 px-4 my-7">
+      <!-- Title row: hamburger on the left, title in the center -->
+      <div class="relative flex items-center justify-center">
+        <button
+          id="menu-btn"
+          aria-label="Navigation öffnen"
+          aria-expanded="false"
+          aria-controls="nav-list"
+          class="flex md:hidden flex-col justify-center gap-[5px] absolute left-0 p-2 border border-gray-300 rounded transition-all"
+        >
+          <span
+            id="bar1"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+          <span
+            id="bar2"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+          <span
+            id="bar3"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+        </button>
+
+        <h1
+          class="relative animate-header text-base md:text-2xl text-center tracking-wide p-2 ml-10 md:ml-0"
+        >
+          <span class="text-orange-400 text-xl md:text-3xl">^</span>
+          Willkommen auf meiner Website
+          <span class="text-green-700 text-xl md:text-3xl">$</span>
+        </h1>
+      </div>
+
+      <!-- Nav: hidden by default on mobile, always visible on md+ -->
+      <nav class="relative">
+        <ul
+          id="nav-list"
+          class="list-none hidden md:flex flex-col md:flex-row items-center gap-4 md:justify-evenly w-full md:w-10/12 mx-auto border-y-2 border-dotted border-black p-3 mt-2 md:mt-0"
+        >
+          <li>
+            <a
+              href="./index.html"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 hover:bg-sky-100"
+            >
+              Startseite
+            </a>
+          </li>
+          <li>
+            <a
+              href="./ÜberMich.html"
+              class="group text-sm md:text-base inline-block p-1 transition-transform duration-200 hover:scale-110 hover:bg-sky-100"
+            >
+              <span
+                class="text-sky-500 text-lg group-hover:text-sky-700 transition-colors duration-300 mr-2"
+                >$</span
+              >
+              whoami
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Logbuch.html"
+              class="group text-sm md:text-base inline-block p-1 transition-transform duration-200 hover:scale-110 hover:bg-sky-100"
+            >
+              <span
+                class="text-sky-500 text-lg group-hover:text-sky-700 transition-colors duration-300 mr-2"
+                >📖</span
+              >
+              Logbuch
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 bg-sky-100"
+            >
+              Zertifikate
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Kontakt.html"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 hover:bg-sky-100"
+            >
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div
+      class="flex flex-col min-h-[120px] justify-evenly items-center font-['Satisfy',cursive] w-10/12 md:w-1/2 mx-auto mb-8 p-4"
+    >
+      <h2 class="text-center text-3xl mb-6 border-b-2 border-red-700">
+        Meine Zertifikate
+      </h2>
+      <p class="text-xl text-center text-gray-600">
+        Klicken Sie auf ein Bild, um es zu vergrößern.....
+      </p>
+    </div>
+
+    <section class="w-11/12 mx-auto mb-12">
+      <div id="cert-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+    </section>
+
+    <div
+      id="certModal"
+      class="hidden fixed inset-0 z-50 bg-black items-center justify-center"
+    >
+      <div class="flex flex-row w-full h-full overflow-hidden">
+        <div
+          id="modalImageContainer"
+          class="flex-1 bg-black overflow-auto custom-scrollbar flex items-start justify-center"
+        >
+          <img
+            id="certModalImage"
+            alt="Zertifikat"
+            ondragstart="return false;"
+            class="block transition-all duration-200 shadow-2xl"
+            style="width: 100%; max-width: none; height: auto"
+          />
+        </div>
+        <div
+          class="flex flex-col w-44 bg-slate-900 p-6 gap-4 border-l border-slate-800"
+        >
+          <p
+            id="certModalTitle"
+            class="text-white text-xs text-center font-semibold break-words"
+          ></p>
+          <div class="border-t border-slate-700 my-1"></div>
+
+          <button
+            id="btn-zoom-in"
+            class="p-3 rounded-lg bg-slate-800 hover:bg-sky-500 text-white text-sm font-medium transition"
+          >
+            🔍+ Zoom-in
+          </button>
+
+          <button
+            id="btn-zoom-out"
+            class="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium transition"
+          >
+            🔍− Zoom-out
+          </button>
+          <div class="border-t border-slate-700 my-1"></div>
+          <button
+            id="btn-close"
+            class="mt-auto p-3 rounded-lg bg-red-800 hover:bg-red-700 text-white text-sm font-medium transition"
+          >
+            Zurück
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="mt-16 border-t border-dotted border-black py-8 px-4">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto gap-4"
+      >
+        <!-- Left: Name & Copyright -->
+        <p class="text-sm text-slate-500">
+          © 2026 <span class="font-semibold text-slate-700">Ang Kami Lama</span>
+        </p>
+
+        <!-- Right: Made with -->
+        <p class="text-xs text-slate-600">
+          Gebaut mit
+          <span class="text-slate-600">HTML, TailwindCSS & Javascript</span>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

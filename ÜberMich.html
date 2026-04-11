@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über Mich</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Satisfy&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans p-0 m-0 border-[15px] md:border-[30px] border-slate-700 bg-[url('./image/bg_color.jpg')] bg-cover bg-top min-h-screen">
+    
+     <header class="flex flex-col gap-5 px-4 my-7">
+      <!-- Title row: hamburger on the left, title in the center -->
+      <div class="relative flex items-center justify-center">
+        <button
+          id="menu-btn"
+          aria-label="Navigation öffnen"
+          aria-expanded="false"
+          aria-controls="nav-list"
+          class="flex md:hidden flex-col justify-center gap-[5px] absolute left-0 p-2 border border-gray-300 rounded transition-all"
+        >
+          <span
+            id="bar1"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+          <span
+            id="bar2"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+          <span
+            id="bar3"
+            class="block w-5 h-0.5 bg-gray-800 rounded transition-all duration-300"
+          ></span>
+        </button>
+
+        <h1
+          class="relative animate-header text-base md:text-2xl text-center tracking-wide p-2 ml-10 md:ml-0"
+        >
+          <span class="text-orange-400 text-xl md:text-3xl">^</span>
+          Willkommen auf meiner Website
+          <span class="text-green-700 text-xl md:text-3xl">$</span>
+        </h1>
+      </div>
+
+      <!-- Nav: hidden by default on mobile, always visible on md+ -->
+      <nav class="relative">
+        <ul
+          id="nav-list"
+          class="list-none hidden md:flex flex-col md:flex-row items-center gap-4 md:justify-evenly w-full md:w-10/12 mx-auto border-y-2 border-dotted border-black p-3 mt-2 md:mt-0"
+        >
+          <li>
+            <a
+              href="./index.html"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 hover:bg-sky-100"
+            >
+              Startseite
+            </a>
+          </li>
+          <li>
+            <a
+              href="./ÜberMich.html"
+              class="group text-sm md:text-base inline-block p-1 transition-transform duration-200 hover:scale-110 bg-sky-100"
+            >
+              <span
+                class="text-sky-500 text-lg group-hover:text-sky-700 transition-colors duration-300 mr-2"
+                >$</span
+              >
+              whoami
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Logbuch.html"
+              class="group text-sm md:text-base inline-block p-1 transition-transform duration-200 hover:scale-110 hover:bg-sky-100"
+            >
+              <span
+                class="text-sky-500 text-lg group-hover:text-sky-700 transition-colors duration-300 mr-2"
+                >📖</span
+              >
+              Logbuch
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Zertifikate.html"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 hover:bg-sky-100"
+            >
+              Zertifikate
+            </a>
+          </li>
+          <li>
+            <a
+              href="./Kontakt.html"
+              class="text-sm md:text-base inline-block p-1 transition duration-300 hover:scale-110 hover:bg-sky-100"
+            >
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="flex flex-col min-h-[80px] justify-evenly items-center font-['Satisfy',cursive] w-10/12 md:w-1/2 mx-auto mb-5 p-4">
+      <h2 class="text-center text-3xl border-b-2 border-red-700">Über mich</h2>
+    </div>
+
+    <div class="w-10/12 md:w-8/12 mx-auto my-2 border-b-2 border-dotted border-black mb-10"></div>
+
+    <main class="py-4 px-4 font-body">
+      <div class="w-full md:w-10/12 lg:w-8/12 mx-auto space-y-12">
+        
+        <article class="bg-slate-200 rounded-sm shadow-2xl overflow-hidden relative">
+          <div class="h-2 bg-gradient-to-r from-accent/70 via-accent to-accent/70"></div>
+          <div class="px-6 md:px-12 py-10 relative z-10">
+            <p class="text-slate-800 leading-relaxed text-base mb-6">
+              <span class="float-left text-accent font-display text-6xl leading-[0.8] mr-3 mt-1">I</span>
+              ch komme ursprünglich aus Nepal, einem Land im Himalaya zwischen China und Indien. Nach meinem erfolgreichen Universitätsabschluss in Deutschland lebe ich hier gemeinsam mit meiner Frau.
+              Ich bin jemand, der leidenschaftlich gerne versteht, wie Dinge wirklich funktionieren — nicht nur an der Oberfläche, sondern in der Tiefe dahinter. Was mich antreibt, ist ein einfacher Grundsatz: Wenn ich ein System benutze oder baue, will ich das Fundament begreifen.
+            </p>
+
+            <h3 class="font-display font-['Satisfy',cursive]  text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-stone-100 pb-2">Mein Weg zur IT</h3>
+            <p class="text-slate-700 leading-relaxed mb-5">
+              Meinen Einstieg in die IT begann mit der Webentwicklung, die ich mir selbst beigebracht habe. Es war für mich eine Leidenschaft, und ich war begeistert davon, wie man eigene Konzepte oder Ideen praktisch umsetzen und sichtbar machen kann. Das hat mir viel Spaß gemacht. Aber je mehr ich programmiert und mit Software gearbeitet habe, desto mehr hat mich eine Frage beschäftigt:
+            </p>
+
+            <blockquote class="my-8 pl-7 border-l-4 border-accent/40 italic">
+              <p class="font-display text-xl text-slate-700 leading-snug">
+                „Was passiert eigentlich im Hintergrund? Was macht der Computer die ganze Zeit, während ich code?"
+              </p>
+            </blockquote>
+
+            <p class="text-slate-700 leading-relaxed mb-5">
+                Ich merkte, dass ich kaum etwas über Computer selbst wusste — über Hardware, Systeme, Netzwerke. Nur programmieren oder Tools benutzen — das hat mir nicht gereicht. Ich wollte das <strong class="text-slate-900 font-bold">Fundament</strong> auch verstehen. Mein Ziel ist es, ein kompetenter Fachinformatiker zu werden, der nicht nur Code schreibt, sondern auch genau versteht, was im Hintergrund passiert, wie Systeme arbeiten und warum bestimmte Prozesse ablaufen. Deshalb habe ich mich entschieden, eine Umschulung zum Fachinformatiker für Systemintegration zu machen.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-slate-200 rounded-sm shadow-2xl overflow-hidden">
+          <div class="px-6 md:px-12 py-10">
+            <h3 class="font-display font-['Satisfy',cursive]  text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-stone-100 pb-2">Warum fasziniert mich das so?</h3>
+            <p class="text-slate-700 leading-relaxed mb-6">
+                Ich visualisiere mir oft, wie ein Computer funktioniert und was genau im Hintergrund passiert. Dabei stelle ich mir einen Computer wie einen menschlichen Körper vor: RAM und Cache sind wie das Kurzzeitgedächtnis, das Bussystem wie ein Nervensystem, und das UEFI wie der erste „Atemzug“ beim Start. Auch im Bereich KI sehe ich Parallelen: Ein Computer kann lernen und sich ständig weiterentwickeln, ähnlich wie ein Mensch, der immer bereit ist, Neues zu lernen und Erfahrungen zu sammeln. Genau dieses Zusammenspiel fasziniert mich, weil jedes Detail eine wichtige Rolle hat. Es hat mir großen Spaß gemacht, genau zu verstehen, was Schritt für Schritt passiert, wenn ich meinen Computer einschalte. Ich erinnere mich daran, wie ich mich gefragt habe: Was passiert eigentlich genau beim Start? Welche Komponente arbeitet zuerst – das UEFI, der RAM, der Bootloader oder das ROM? Und warum haben Kabel im Computer unterschiedliche Farben?
+            </p>
+
+            <div class="my-8 text-center text-accent tracking-[1em] text-sm">✦ ✦ ✦</div>
+
+            <h3 class="font-display font-['Satisfy',cursive]  text-2xl font-bold text-slate-900 mt-10 mb-4 border-b border-stone-100 pb-2">Bevor ich zur IT kam</h3>
+            <p class="text-slate-700 leading-relaxed mb-5">
+              Ich habe Soziologie mit dem Schwerpunkt Gender und Diversity an der Hochschule Rhein-Waal studiert. Das klingt auf den ersten Blick weit entfernt von der IT. Aber dieses Studium hat mir etwas sehr Wichtiges mitgegeben: genau hinzuschauen, Zusammenhänge zu erkennen und zu verstehen, dass kleine Dinge große Auswirkungen haben können. Diese Fähigkeiten helfen mir heute noch – auch beim Troubleshooting.
+            </p>
+          </div>
+        </article>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <article class="bg-slate-200 p-8 shadow-xl border-t-4 border-accent">
+                <h3 class="font-display font-['Satisfy',cursive]  text-2xl font-bold text-slate-900 mt-5 mb-4 border-b border-stone-100 pb-2">Wer ich sonst noch bin</h4>
+                <p class="text-sm leading-relaxed text-slate-600 italic">
+                    Ich koche gerne — für mich ist Kochen Kreativität und Entspannung gleichzeitig. Ich reise gerne und interessiere mich für andere Kulturen, Essen, Kunst und Geschichte. Alte Städte und Museen erzählen Geschichten, die ich liebe. Meine Neugier motiviert mich, ständig Neues zu lernen – sowohl privat als auch beruflich.
+                </p>
+            </article>
+
+            <article class="bg-slate-800 p-8 shadow-xl border-t-4 border-orange-400 text-white">
+                <h3 class="font-display font-['Satisfy',cursive]  text-2xl font-bold text-slate-100 mt-5 mb-4 border-b border-stone-100 pb-2">Was ich mir wünsche</h4>
+                <p class="text-[15px] leading-relaxed text-slate-100 font-body italic font-light"> "Ich suche ein Praktikum, bei dem ich wirklich dabei sein darf — nicht nur zuschauen, sondern mitmachen, Fragen stellen und verstehen. Ich möchte in einem Umfeld arbeiten, in dem das Prinzip <span class="text-orange-300 font-bold not-italic">»Learning by Doing«</span> gelebt wird. <br><br>
+                Mein Ziel ist es, mich kontinuierlich weiterzuentwickeln und ein kompetenter Fachinformatiker zu werden."
+                </p>
+            </article>
+        </div>
+      </main>
+      <!-- FOOTER -->
+    <footer class="mt-16 border-t border-dotted border-black py-8 px-4">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto gap-4"
+      >
+        <p class="text-sm text-slate-500">
+          © 2026 <span class="font-semibold text-slate-700">Ang Kami Lama</span>
+        </p>
+        <p class="text-xs text-slate-600">
+          Gebaut mit
+          <span class="text-slate-600">HTML, TailwindCSS & Javascript</span>
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./app.js"></script>
+  </body>  
+</html>
